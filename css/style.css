@@ -363,14 +363,14 @@ body h1 {
     flex: content;
     justify-content: center;
     min-height: 100vh;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 250;
     font-family: 'Press Start 2P', cursive;
     border-radius: 20px;
     background-color: aqua;
     opacity: 65%;
     box-shadow: 0 5px 10px aqua;
-    text-align: center;
+    text-align: inherit;
     padding: 25px;
     line-height: 40px;
 }
@@ -616,6 +616,7 @@ a {
 
     .Sections {
         font-size: 18px;
+        text-align: center;
     }
 
     .AboutDiv {
