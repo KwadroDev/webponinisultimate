@@ -737,7 +737,7 @@ a {
     }
 
     .timeline {
-        width: 50vh;
+        width: 100%;
         max-width: 900px;
     }
 }
