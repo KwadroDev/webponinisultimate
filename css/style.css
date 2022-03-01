@@ -269,7 +269,7 @@ body h1 {
 }
 
 .container {
-    width: 85%;
+    width: 80%;
     max-width: 200vh;
     margin: 0 auto;
 }
@@ -364,7 +364,7 @@ body h1 {
     justify-content: center;
     min-height: 100vh;
     font-size: 12px;
-    font-weight: 250;
+    font-weight: 200;
     font-family: 'Press Start 2P', cursive;
     border-radius: 20px;
     background-color: aqua;
@@ -393,7 +393,7 @@ body h1 {
 }
 
 .SectionsContainer {
-    padding: 50px;
+    padding: 25px;
 }
 
 .TraitsImg {
