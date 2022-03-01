@@ -376,7 +376,7 @@ select {
 }
 
 .timeline {
-    width: 95%;
+    width: 80%;
     height: auto;
     max-width: 800px;
     margin: 0 auto;
@@ -400,16 +400,16 @@ select {
 }
 
 .timeline-content h1 {
-    font-size: 22px;
+    font-size: 16px;
     font-size-adjust: auto;
-    font-weight: 500;
+    font-weight: 300;
     line-height: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: #41dfff;
 }
 
 .timeline-content p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 30px;
     font-weight: 300;
     color: white;
