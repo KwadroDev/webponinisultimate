@@ -568,7 +568,7 @@ a {
       
 }
 
-@media (min-width: 950px) {
+@media (min-width: 980px) {
     .menu-icon {
         display: none;
     }
@@ -656,7 +656,7 @@ a {
     }
 }
 
-@media only screen and (min-width: 950px) {
+@media only screen and (min-width: 980px) {
     .container-roadmap {
         width: 100%;
         padding-bottom: 50px;
