@@ -326,7 +326,7 @@ select {
 }
 
 .Sections {
-    display: flex;
+    display: block;
     flex: content;
     justify-content: center;
     min-height: 100vh;
@@ -358,6 +358,15 @@ select {
 
 }
 
+.SectionsContainer {
+    padding: 50px;
+}
+
+.TraitsImg {
+    width: 193px;
+    border-radius: 20px;
+}
+
 .Roadmap {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -373,6 +382,41 @@ select {
     align-items: center;
     justify-content: center;
     padding: 50px;
+}
+
+.Community a {
+    color: #c777b9;
+    transform: scale(1.1);
+}
+
+.Community a:hover {
+    color: white;
+    transition: transform 0.4s;
+    font-size: 20px;
+}
+
+.Owner {
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    padding: 50px;
+}
+
+.Owner h2 {
+    font-size: 20px;
+}
+
+.Owner img {
+    border-radius: 25px;
+    width: 193px;
+}
+
+.TeraByteNFTs {
+    font-size: 12px;
+}
+
+.TeraByteNFTs:hover {
+    color: #c777b9;
+    opacity: 85%;
 }
 
 .timeline {
@@ -430,6 +474,51 @@ select {
 
 .Title h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Footer {
+    text-align: center;
+    min-height: 20vh;
+    margin: 50px 0 15px 0;
+    font-size: 18px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: linear-gradient(to bottom, #232a32, #252c34, 
+    #262d36, #282f38, #2a313a, #2c333d, #2d363f, #2f3842, #313b46, 
+    #343e49, #36414d, #394451);
+  
+}
+
+.FooterContainer ul li {
+    display: inline-block;
+}
+
+.Footer ul {
+    display: flex;
+    flex: content;
+    gap: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+.FooterContainer {
+    list-style: none;
+}
+
+.Footer a {
+    font-size: 14px;
+}
+
+a {
+    color: #41dfff;
+    transition: transform 0.4s;
+}
+
+.link:hover {
+    color: #c777b9;
+    transform: scale(1.1);
+    opacity: 85%;
+      
 }
 
 @media (min-width: 1050px) {
