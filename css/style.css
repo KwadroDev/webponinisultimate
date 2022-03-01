@@ -659,7 +659,7 @@ a {
 @media only screen and (min-width: 970px) {
     .container-roadmap {
         width: 100%;
-        padding-bottom: 60px;
+        padding-bottom: 50px;
     }
     .timeline::before {
         content: '';
@@ -738,5 +738,6 @@ a {
 
     .timeline {
         width: 50vh;
+        max-width: 900px;
     }
 }
