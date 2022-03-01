@@ -420,7 +420,7 @@ body h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5px;
+    padding: 3px;
 }
 
 .Community a {
@@ -659,6 +659,7 @@ a {
 @media only screen and (min-width: 1050px) {
     .container-roadmap {
         width: 100%;
+        padding-bottom: 50px;
     }
     .timeline::before {
         content: '';
@@ -715,7 +716,7 @@ a {
 
     .timeline-content .Porcentage {
         position: absolute;
-        top: -30px;
+        top: -35px;
         font-size: 24px;
     }
 
