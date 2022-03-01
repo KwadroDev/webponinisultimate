@@ -113,25 +113,50 @@ body h1 {
     font-size: 16px;
 }
 
-select {
-    width: 100px;
-    height: 40px;
-    padding: 0.1rem 0.6rem;
-    border-radius: 5%;
-    color: black;
+.custom-select {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border-radius: 15px;
     border: 0;
-    margin: 10px;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.select-option {
+    color: #333;
 }
 
 .ButtonConnect {
-    color: white;
-    margin: 35px;
-    background-color: seagreen;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
     border-radius: 25px;
+    border: 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.btn--success {
+    background: seagreen;
+    color: white;
 }
 
 .ButtonMint {
-    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    border: 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.btn--info {
+    color: #333;
     background-color: #41dfff;
 }
 
@@ -507,6 +532,10 @@ select {
 
 .Footer a {
     font-size: 14px;
+}
+
+hr {
+    opacity: 25%;
 }
 
 a {
