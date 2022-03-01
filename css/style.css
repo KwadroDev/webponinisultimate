@@ -517,7 +517,7 @@ select {
 
 @media only screen and (min-width: 1050px) {
     .container-roadmap {
-        width: 100vh;
+        width: 100%;
     }
     .timeline::before {
         content: '';
