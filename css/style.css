@@ -568,6 +568,54 @@ a {
       
 }
 
+@media (min-width: 680px) {
+    .Logo {
+        width: 350px;
+    }
+
+    .img_top {
+        width: 293px;
+    }
+
+    .Sections {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .AboutDiv {
+        text-size-adjust: auto;
+    }
+
+    .About {
+        align-items: center;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 80;
+        width: 450px;
+    }
+
+    .img_mint {
+        width: 293px;
+    }
+
+    .TraitsImg {
+        width: 293px;
+    }
+
+    .Owner img {
+        width: 293px;
+    }
+
+    .TeraByteNFTs {
+        font-size: 14px;
+    }
+
+    .Contract {
+        font-size: 8px;
+        font-weight: 500;
+    }
+}
+
 @media (min-width: 970px) {
     .menu-icon {
         display: none;
