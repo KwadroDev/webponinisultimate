@@ -568,7 +568,7 @@ a {
       
 }
 
-@media (min-width: 680px) {
+@media (min-width: 600px) {
     .Logo {
         width: 350px;
     }
