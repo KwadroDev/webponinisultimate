@@ -102,6 +102,7 @@ body h1 {
     background-color: #232A32;
     text-align: center;
     padding: 20px;
+    line-height: 25px;
 }
 
 #web3_message {
@@ -144,6 +145,13 @@ body h1 {
     border: 0;
     text-transform: uppercase;
     white-space: nowrap;
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+
+.ButtonConnect:hover {
+    transform: scale(1.1);
+    color: #333;
 }
 
 .btn--success {
@@ -160,6 +168,13 @@ body h1 {
     border: 0;
     text-transform: uppercase;
     white-space: nowrap;
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+
+.ButtonMint:hover {
+    transform: scale(1.1);
+    color: #fff;
 }
 
 .btn--info {
@@ -568,6 +583,22 @@ a {
       
 }
 
+#web3_message {
+    font-size: 12px;
+}
+
+#nft_balance {
+    font-size: 12px;
+}
+
+#total_mint {
+    font-size: 12px;
+}
+
+#price {
+    font-size: 12px;
+}
+
 .gotoup {
     position: fixed;
     width: 50px;
@@ -581,9 +612,9 @@ a {
     text-decoration: none;
     text-align: center;
     line-height: 50px;
-    color: #41dfff;
+    color: #fff;
     font-size: 28px;
-    opacity: 85%;
+    opacity: 50%;
     cursor: pointer;
     display: none;
 }
@@ -633,6 +664,22 @@ a {
     .Contract {
         font-size: 8px;
         font-weight: 500;
+    }
+
+    #web3_message {
+        font-size: 14px;
+    }
+    
+    #nft_balance {
+        font-size: 14px;
+    }
+    
+    #total_mint {
+        font-size: 14px;
+    }
+    
+    #price {
+        font-size: 14px;
     }
 }
 
@@ -723,6 +770,22 @@ a {
     .Contract {
         font-size: 10px;
         font-weight: 500;
+    }
+
+    #web3_message {
+        font-size: 16px;
+    }
+    
+    #nft_balance {
+        font-size: 16px;
+    }
+    
+    #total_mint {
+        font-size: 16px;
+    }
+    
+    #price {
+        font-size: 16px;
     }
 }
 
