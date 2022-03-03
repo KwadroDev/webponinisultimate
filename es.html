@@ -6,27 +6,574 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-    content="Ponini's, is an NFT collection made up of 10 Traits in 8Bit art released on the Polygon Network. 
-    Each NFT is different, there are many combinations and 8 rarities, 
-    making your piece unique. From horses, unicorns and pegasus, 
-    to a mixture of all of them with elemental powers. 
-    You can find them by randomly Minting." />
+    content="Ponini's, es una colección NFT compuesta por 10 rasgos en el arte 8Bit lanzada en la Red de Polygon. 
+    Cada NFT es diferente, existen muchas combinaciones y 8 rarezas, haciendo que tu pieza sea única. 
+    Desde caballos, unicornios y pegasus, hasta una mezcla de todas ellas con poderes elementales. 
+    Los puedes encontrar al hacer Mint de manera aleatoria." />
   <link rel="manifest" href="./public/manifest.json" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="./css/style.css">
     <title>Poninis</title>
 </head>
 <body>
-    <div class="EnEs">
-        <span class="en">Ingles</span>
-          <input type="checkbox" class="check" checked>
-        <span class="es">Español</span>
-      </div>
+  <header class="header">
+    <div class="container">
+        <span class="menu-icon"><i class="fa-solid fa-bars"></i></span>
+        <nav class="navegation redes">
+            <ul>
+              <li><a class="link" href="/">Inicio</a></li>
+              <li><a class="buttonlink" href="#">Mis NFT</a></li>
+              <li><a class="buttonlink" href="#">Tablero</a></li>
+              <li><a class="buttonlink" href="#">Mercado</a></li>
+            </ul>
+            <ul class="navbar-nav gap-4" id="SocialNetwork">
+              <li class="nav-item">
+                <a href="https://www.twitter.com/poninisnft/" class="twitter" target="_blank" alt="Twitter"><i
+                    class="fab fa-twitter"></i></a>
+              </li>
+              <li class="nav-item">
+                <a href="https://www.instagram.com/poninisnft/" class="instagram" target="_blank" alt="Instagram"><i
+                    class="fab fa-instagram"></i></a>
+              </li>
+              <li class="nav-item">
+                <a href="https://t.me/poninisnft" class="telegram" target="_blank" alt="Telegram"><i class="fab fa-telegram"></i></a>
+              </li>
+              <li class="nav-item">
+                <a href="https://discord.gg/z7HFNAJkeY" class="discord" target="_blank" alt="Discord"><i class="fab fa-discord"></i></a>
+              </li>
+            </ul>
+        </nav>
+    </div>
+  </header>
 
+  <div class="barCountdown">
+    <nav class="bar" id="Gradient">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <p class="nav" id="countdown">Subscripcion Lista Blanca</p>
+            </li>
+          </ul>
+    </nav>
+  </div>
+
+  <div class="barSearch">
+    <nav class="barSelect navbar-expand-lg">
+      <div class="container-fluid">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#story" style="text-decoration: none;">Historia</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#mint-details" style="text-decoration: none;">Detalles Del Mint NFT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#rarity" style="text-decoration: none;">Rasgos & Rarezas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#roadmap" style="text-decoration: none;">Hoja De Ruta</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#community" style="text-decoration: none;">Beneficios Para La Comunidad</a>
+                </li>
+            </ul>
+          </div>
+      </div>
+    </nav>
+  </div>
+
+  <top class="container">
+
+    <top class="TopBar">
+        <div class="EnEs">
+            <span class="en">Ingles</span>
+              <input type="checkbox" class="check" checked>
+            <span class="es">Español</span>
+        </div>
+    </top>
+
+      <div class="Title">
+        <img class="Logo" src="https://storage.googleapis.com/poninis/poninis_brand_En.svg" alt="Logo">
+      </div>
+  </top>
+
+  <div class="Header" id="Header">
+    <div class="Top shadow">
       <div>
-        <h1>Español</h1>
+        <div class="HeaderTop">
+          <div>
+            <img class="img_top" src="https://storage.googleapis.com/poninis/perfil_img_web.gif" alt="NFT" />
+          </div>
+          <div class="AboutDiv">
+            <p class="About">
+            Ponini's, es una colección NFT compuesta por 10 rasgos en el arte 8Bit lanzada en la Red de Polygon.
+            <br> 
+            Cada NFT es diferente, existen muchas combinaciones y 8 rarezas, haciendo que tu pieza sea única.
+            <br>
+            Desde caballos, unicornios y pegasus, hasta una mezcla de todas ellas con poderes elementales.
+            <br>
+            Los puedes encontrar al hacer Mint de manera aleatoria.
+            <br><br>
+              <span class="Contract" style="color: aqua;">Contrato Verificado:
+              <a class="VContract" style="color: #fff; text-decoration: none;" 
+              href="https://mumbai.polygonscan.com/address/0xfac5775552fc18b50b405872a78fd31b9e7735e9#code" 
+              target="_blank">0xfac5775552fC18B50B405872A78fD31b9e7735E9</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <Banner class="CollageBanner">
+    <!-- <div class="Banner">
+      <section>
+        <a target="_blank" href="https://polygonscan.com"><img src="./assets/polygon-logo.svg" alt="Polygon"></a>
+      </section>
+    </div> -->
+
+    <div class="Collage">
+      <img src="https://storage.googleapis.com/poninis/poninis_banner.svg" alt="Banner">
+    </div>
+  </Banner>
+
+  <main class="container">
+    <div class="Mint">
+        <img class="img_mint" src="https://storage.googleapis.com/poninis/image.gif" alt="NFTmint" />
+        <br />
+        <input class="ButtonConnect btn--success" id="connect_button" type="button" value="connect"
+          onclick="connectWallet()">
+        <p><span id="web3_message">Cargando web3...</span></p>
+        <select class="custom-select select-option" id="mint_amount">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+        </select>
+        <input class="ButtonMint btn--info" type=button value="mint!" onclick="mint()">
+        <br>
+        <br>
+        <p id="nft_balance">...</p>
+        <p id="total_mint"></p>
+        <p id="price"></p>
+    </div>
+
+    <div class="Sections">
+
+      <div class="Story SectionsContainer" id="story">
+        <div><h2>Historia</h2></div>
+        <br>
+        <p>
+          DreamLands, es el mundo donde habitan los Ponini's, un lugar lleno de aventuras y fantasía.
+          <br />
+          El universo paralelo al que todos podemos acceder hoy.
+          <br>
+          Los animales, la naturaleza y casi todo lo que los rodea es la especie dominante.
+          <br>
+          Dentro del DreamsVerse en DreamLands nos situamos en HorseKingdom librando una batalla contra una fuerza maligna
+          que ha corrompido algunos Ponini's,
+          los más fuertes luchan para devolver la paz a su reino y proteger la magia de los seres Míticos.
+          <br>
+          Sobre 10,000 maravillosos Ponini's esperan para ser minteados. 
+        </p>
       </div>
 
-      <!--scripts-->
-      <script src="./src/enes.js"></script>
+      <div class="Mint-Details SectionsContainer" id="mint-details">
+        <h2>Detalles Del Mint NFT</h2>
+        <br>
+        <span>
+          <p>
+            <p3>Red</p3> - Polygon
+          </p>
+        </span>
+        <span>
+          <p>
+            <p3>Suministro Total</p3> - 10,000
+          </p>
+        </span>
+        <span>
+          <p>
+            <p3>Lista Blanca</p3> - Costo 25 Matic - Suministro 1,000
+            (Limite De Compras Por Wallet - 5)
+          </p>
+        </span>
+        <span>
+          <p>
+            <p3>Pre-Venta</p3> - Costo 35 Matic - Suministro 1,400
+            (Limite Por Compras - 10)
+          </p>
+        </span>
+        <span>
+          <p>
+            <p3>Mint Reservados</p3> - 100 Para Recompenzas y Sorteos
+          </p>
+        </span>
+        <span>
+          <p>
+            <p3>Venta Fase 1</p3> - Costo 50 Matic - Suministro 2,500
+            (Limite Por Compras - 20)
+          </p>
+        </span>
+        <span>
+          <p>
+            <p3>Venta Fase 2</p3> - Costo 75 Matic - Suministro 2,500
+            (Limite Por Compras - 20)
+          </p>
+        </span>
+        <span>
+          <p>
+            <p3>Venta Fase 3</p3> - Costo 100 Matic - Suministro 2,500
+            (Limite Por Compras - 20)
+          </p>
+        </span>
+      </div>
+
+      <div class="Rarity SectionsContainer" id="rarity">
+        <h2>Rasgos & Rarezas</h2>
+        <br>
+        <span>
+          <p>
+            Son 100% únicos, se trabajo cada uno de sus rasgos por separados y unidos de forma aleatoria, 
+            para que asi sea más divertido e interesante la colección.
+            <br />
+          <h4>-Partes-</h4>
+          <span>
+            <p3>
+              Rarity / Background
+            </p3>
+          </span>
+          <br />
+          <span>
+            <p3>
+              Body
+            </p3>
+          </span>
+          <br />
+          <span>
+            <p3>
+              Snout
+            </p3>
+          </span>
+          <br />
+          <span>
+            <p3>
+              Hoof
+            </p3>
+          </span>
+          <br />
+          <span>
+            <p3>
+              Hair
+            </p3>
+          </span>
+          <br />
+          <span>
+            <p3>
+              Hair Stains
+            </p3>
+          </span>
+          <br />
+          <span>
+            <p3>
+              Horn Unicorn
+            </p3>
+          </span>
+          <br />
+          <span>
+            <p3>
+              Swings
+            </p3>
+          </span>
+          <br />
+          <span>
+            <p3>
+              Eyes
+            </p3>
+          </span>
+          <br />
+          <span>
+            <p3>
+              Power
+            </p3>
+          </span>
+          <br></br>
+          <div class="RarityImg" style="text-align: center;">
+            <img class="TraitsImg shadow" src="https://storage.googleapis.com/poninis/traits_poninis.svg" alt="Rarity" />
+          </div>
+          <p2>NFT Ejemplo Rasgos & Rarezas</p2>
+          <br></br>
+          <span>
+            <p3>●Rarity</p3> <p2>- Epic (10%)</p2>
+          </span>
+          <br />
+          <span>
+            <p3>●Body</p3> <p2>- Black (2%)</p2>
+          </span>
+          <br />
+          <span>
+            <p3>
+              ●Snout <p2>- Brown (65%)</p2>
+            </p3>
+          </span>
+          <br />
+          <span>
+            <p3>
+              ●Hoof <p2>- Black (17%)</p2>
+            </p3>
+          </span>
+          <br />
+          <span>
+            <p3>
+              ●Hair <p2>- White (4%)</p2>
+            </p3>
+          </span>
+          <br />
+          <span>
+            <p3>
+              ●Hair Stains <p2>- None (40%)</p2>
+            </p3>
+          </span>
+          <br />
+          <span>
+            <p3>
+              ●Horn <p2>- Stone (13.65%)</p2>
+            </p3>
+          </span>
+          <br />
+          <span>
+            <p3>
+              ●Swings <p2>- None (60%)</p2>
+            </p3>
+          </span>
+          <br />
+          <span>
+            <p3>
+              ●Eyes <p2>- Corrupt (20%)</p2>
+            </p3>
+          </span>
+          <br />
+          <span>
+            <p3>
+              ●Power <p2>- None (80%)</p2>
+            </p3>
+          </span>
+        </div>
+      
+      <div class="Roadmap SectionsContainer" id="roadmap">
+        <h2>Hoja De Ruta</h2>
+      </div>
+      <div class="container-roadmap">
+        <div class="timeline">
+          <ul>
+            <li>
+              <div class="timeline-content">
+                <h3 class="Porcentage">0%</h3>
+                <h1>Suscripción Lista Blanca</h1>
+                <p>•3/15/2022 0:00 UTC+0 Comienza la venta privada
+                  <br>
+                  •Duración 168hrs o mientras duren
+                  <br>
+                  •Venta Privada Por Lista Blanca
+                  <br>
+                  •NFT No Revelado</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content">
+                <h3 class="Porcentage">10%</h3>
+                <h1>1,000 NFT Minteados</h1>
+                <p>•Pre-Venta
+                  <br>
+                  •Duración 168hrs o mientras duren
+                  <br>
+                  •Los 100 NFT reservados seran minteados
+                  <br>
+                  •NFT No Revelado</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content">
+                <h3 class="Porcentage">25%</h3>
+                <h1>2,500 NFT Minteados</h1>
+                <p>●Revelado De NFT Minteados
+                  <br>
+                  •Comienza la venta Fase 1
+                  <br>
+                  •Marketing</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content">
+                <h3 class="Porcentage">50%</h3>
+                <h1>5,000 NFT Minteados</h1>
+                <p>•Comienza la venta Fase 2
+                  <br>
+                  •Marketing Masivo
+                  <br>
+                  •Sorteo & Recompensas En USDC Para Los Holders #1</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content">
+                <h3 class="Porcentage">75%</h3>
+                <h1>7,500 NFT Minteados</h1>
+                <p>•Comienza la venta Fase 3
+                  <br>
+                  •Sorteos & Recompensas en USCD Para Los Holders #2</p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content">
+                <h3 class="Porcentage">100%</h3>
+                <h1>10,000 NFT Minteados</h1>
+                <p>●NFT Agotados
+                  <br>
+                  •Recompensas en USCD Para Los Holders #3
+                  <br>
+                  •Revelamos El Proximo Proyecto
+                  </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="Community SectionsContainer" id="community">
+        <h2>Beneficios Para La Comunidad</h2>
+        <br>
+        <span>
+          <p>
+            Para el beneficio de nuestra comunidad soy fiel creyente en incentivar a los primeros en llegar y todos los poseedores de Ponini's.
+            <br>
+            Es por esto que los costos para Mintear tu NFT irán aumentando exponencialmente según la etapa del proyecto.
+            <br>
+            Tenemos sorteos, recompensas y espacios exclusivos para futuros proyectos.
+            <br>
+            Estableceremos todos los proyectos bajo una misma empresa y seguiremos desarrollando en la blockchain.
+            <br>
+            Es importante seguirnos, estar atentos a nuestras redes sociales y comunidades.
+            <br><br>
+            •Todo holder de 1 NFT podrá acceder a la whitelist del proximo proyecto con 1 compra y participar en sorteos de NFT Ponini's.
+            <br />
+            •Todo holder de 2 NFT podrá acceder a la whitelist del proximo proyecto con 2 compras y participar en sorteos de NFT Ponini's y recompensas en USDC.
+            <br />
+            •Todo holder de 5 NFT podrá acceder a la whitelist del proximo proyecto con 3 compras y participar en sorteos de NFT Ponini's y recompensas en USDC, 
+            Ademas tendrá un espacio exclusivo en el Airdrop del próximo proyecto.
+            <br />
+            •Todo holder de 10 NFT podrá acceder a la whitelist del proximo proyecto con 5 compras y participar en sorteos de NFT Ponini's y recompensas en USDC, 
+            Además tendrá acceso al canal VIP de Discord donde mostraremos algunos detalles clasificados y participar en las votaciones para la toma de decisiones. 
+          </p>
+        </span>
+        <br>
+        <span>
+          <h3>Redes Sociales<br> &<br> Comunidades</h3>
+          <br>
+          <p3><a style="text-decoration: none;" href="https://twitter.com/poninisnft/" target="_blank">Twitter</a></p3><p>Será nuestra red social principal.</p>
+          <br>
+          <p3><a style="text-decoration: none;" href="https://instagram.com/poninisnft/" target="_blank">Instagram</a></p3><p>Queremos tener la dinámica de postear todos los nft minteados y que hayas obtenido en sorteos o recompensas. 
+          <br>
+          Como lo haremos!!! twitteando la foto del nft con el hashtag <p2>#poninisnft</p2> y etiquetandonos <p2>@poninisnft</p2>
+          <br>
+          Tendremos un formulario que podras llenar y participar para obtener premios.
+          En nuestras redes anunciaremos los días de sorteos y ganadores.
+          <br>
+          link-</p>
+          <br>
+          <p3><a style="text-decoration: none;" href="https://discord.gg/z7HFNAJkeY" target="_blank">Discord</a></p3><p>Tendremos diferentes canales para que toda la comunidad pueda interactuar.
+          <br>
+          Incluyendo un canal VIP</p>
+          <br>
+          <p3><a style="text-decoration: none;" href="https://t.me/poninisnft" target="_blank">Telegram</a><p>Solo para anuncios.</p></p3>
+        </span>
+      </div>
+    </div>
+  </main>
+
+  <section class="Section">
+    <!--<div class="FAQ">
+      <h2>FAQ</h2>
+      <h3>● Si vendo mi nft en Opensea aparece en venta en el marketplace de Ponini's?</h3>
+      <p>
+        Si, de igual manera si lo vendes en el marketplace de Ponini's tambien aparece en Opensea
+      </p>
+      <h3>● Cuando podre ver mis nft?</h3>
+      <p>
+        Una vez comience la venta Fase 1 se revelaran los nft
+      </p>
+      <h3>● </h3>
+    </div> -->
+
+    <div class="Owner container">
+        <h2>Owner</h2>
+        <br>
+        <img src="https://storage.googleapis.com/poninis/4086.gif" alt="TeraByteNFTs">
+        <br>
+        <br>
+        <a class="TeraByteNFTs" style="text-decoration: none;" 
+          href="https://twitter.com/terabytenfts" target="_blank">@TeraByteNFTs</a>
+    </div>
+    <br>
+  </section>
+
+  <footer>
+    <div class='Footer'>
+      <div class="container">
+        <div class="FooterContainer ContactFooter">
+          <ul>
+            <li class="FooterContact">
+              <h6>Comunidad</h6>
+              <a class="link" style="text-decoration:none" target="_blank" href="https://discord.gg/z7HFNAJkeY">Discord</a>
+              <br />
+              <a class="link" style="text-decoration:none" target="_blank" href="https://t.me/poninisnft">Telegram</a>
+            </li>
+            <li class="FooterContact">
+              <h6>Redes Sociales</h6>
+              <a class="link" style="text-decoration:none" target="_blank" href="https://www.instagram.com/poninisnft/">Instagram</a>
+              <br />
+              <a class="link" style="text-decoration:none" target="_blank" href="https://www.twitter.com/poninisnft/">Twitter</a>
+            </li>
+          </ul>
+        </div>
+        <hr style="margin: 15px 15px 15px 0;">
+        <div class="FooterContainer">
+          <ul>
+            <li>
+              <h6 style="color: white; font-weight: 400;">Copyright © 2022 Poninis | All Right Reserverd</h6>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a class="gotoup" href="#"><i class="fa-solid fa-angles-up"></i></a>
+  <!--scripts-->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.5/web3.min.js"></script>
+  <script src="./src/enes.js"></script>
+  <script src="./src/countdown.js"></script>
+  <script src="./src/menu.js"></script>
+  <script src="./src/gotoup.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="./src/main.js"></script>
+  <script src="./src/web3.js"></script>
+  <script src="./src/little_horse_nft.js"></script>
 </body>
 </html>
