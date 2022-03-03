@@ -15,6 +15,7 @@ body {
     background: #232A32;
     color: white;
     font-size: 1.2rem;
+    min-height: 100%;
     margin: 0;
 }
 
@@ -531,7 +532,7 @@ body h1 {
 
 .Footer {
     text-align: center;
-    min-height: 20vh;
+    min-height: 12vh;
     margin: 50px 0 15px 0;
     font-size: 18px;
     color: white;
