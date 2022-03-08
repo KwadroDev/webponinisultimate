@@ -301,6 +301,10 @@ body h1 {
     font-weight: 500;
 }
 
+.barCountdown {
+    max-height: 100%;
+}
+
 .barCountdown p {
     text-align: center;
 }
