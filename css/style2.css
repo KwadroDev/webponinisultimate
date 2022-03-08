@@ -61,7 +61,7 @@ body h1 {
     vertical-align: -webkit-baseline-middle;
     width: 50px;
     height: 25px;
-    font-size: 10px;
+    font-size: 8px;
     border-radius: 25px;
     box-sizing: border-box;
     border: 8px solid #333;
@@ -603,163 +603,7 @@ a {
     display: none;
 }
 
-.content {
-    display: flex;
-    flex-direction: row;
-}
 
-.text-gradient {
-    background: -webkit-linear-gradient(360deg, #d16ba5, #c777b9, #ba83ca, #aa8fd8, 
-    #9a9ae1, #8aa7ec, #79b3f4, #69bff8, 
-    #52cffe, #41dfff, #46eefa, #5ffbf1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.NFT-Card {
-    display: flex;
-    flex-direction: column;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.groupCard {
-    display: grid;
-    flex: 1;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-gap: 35px;
-}
-
-.cardContainer {
-    max-width: 100%;
-    justify-content: center;
-}
-
-.item-card {
-    box-shadow: 5px 10px rgb(29, 29, 29);
-}
-
-.card-body {
-    background: whitesmoke;
-    position: relative;
-    max-width: 100%;
-}
-
-.text-verified {
-    background: -webkit-linear-gradient(90deg, #d16ba5, #c777b9, #ba83ca, #aa8fd8, 
-    #9a9ae1, #8aa7ec, #79b3f4, #69bff8, 
-    #52cffe, #41dfff, #46eefa, #5ffbf1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.btnDelist {
-    display: flex;
-    justify-content: right;
-    position: absolute;
-    margin: -2.9rem 11rem;
-}
-
-.DelistButton {
-    color: white;
-    background: red;
-    cursor: pointer;
-    width: 90px;
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 1rem 1.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 15px;
-    border: 0;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
-.DelistButton:hover {
-    color: #333;
-}
-
-.btnBuy {
-    display: flex;
-    justify-content: right;
-    position: absolute;
-    margin: -2.9rem 11rem;
-}
-
-.BuyButton {
-    color: white;
-    background: seagreen;
-    cursor: pointer;
-    width: 80px;
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 1rem 2.2rem;
-    padding: 0.5rem 1rem;
-    border-radius: 15px;
-    border: 0;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
-.BuyButton:hover {
-    transform: 0.4s;
-    color: #333;
-}
-
-.btnApprove {
-    display: flex;
-    justify-content: right;
-    position: absolute;
-    margin: -2.9rem 11rem;
-}
-
-.ApproveButton {
-    color: white;
-    background: #41dfff;
-    cursor: pointer;
-    width: 110px;
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 1rem 0.3rem;
-    padding: 0.5rem;
-    border-radius: 15px;
-    border: 0;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
-.ApproveButton:hover {
-    transform: 0.4s;
-    color: #333;
-}
-
-.listingfrom {
-    display: flex;
-    flex: content;
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
-}
-
-.SellButton {
-    background: seagreen;
-    color: white;
-    cursor: pointer;
-    width: 90px;
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 1rem 0;
-    padding: 0.5rem;
-    border-radius: 15px;
-    border: 0;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
-.SellButton:hover {
-    transform: 0.4s;
-    color: #333;
-}
 
 .btn-blue-200 {
     background-color: #b0d7f2;
@@ -782,15 +626,9 @@ button,
 }
 
 .load-more-button {
-    background: linear-gradient(90deg, #d16ba5, #c777b9, #ba83ca, #aa8fd8, 
-    #9a9ae1, #8aa7ec, #79b3f4, #69bff8, 
-    #52cffe, #41dfff, #46eefa, #5ffbf1);
+    background: linear-gradient(90deg, #f0b2f4, #86ece8)!important;
     border: none!important;
-    font-weight: 600!important;
-}
-
-.hide {
-    display: none;
+    font-weight: 600!important
 }
 
 .custom-toggle .custom-control-input:checked~.custom-control-label:before {
@@ -913,7 +751,7 @@ button.modal-return-button .MuiSvgIcon-root {
     }
 
     .Contract {
-        font-size: 10px;
+        font-size: 8px;
         font-weight: 500;
     }
 
@@ -931,10 +769,6 @@ button.modal-return-button .MuiSvgIcon-root {
     
     #price {
         font-size: 14px;
-    }
-
-    .groupCard {
-        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -1023,7 +857,7 @@ button.modal-return-button .MuiSvgIcon-root {
     }
 
     .Contract {
-        font-size: 12px;
+        font-size: 10px;
         font-weight: 500;
     }
 
@@ -1041,10 +875,6 @@ button.modal-return-button .MuiSvgIcon-root {
     
     #price {
         font-size: 16px;
-    }
-
-    .groupCard {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 }
 

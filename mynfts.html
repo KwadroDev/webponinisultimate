@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="./public/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="./public/manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Poninis</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <span class="menu-icon"><i class="fa-solid fa-bars"></i></span>
+            <nav class="navegation redes">
+                <ul>
+                  <li><a class="link" href="/">Home</a></li>
+                  <li><a class="link" href="/mynfts.html">My NFTs</a></li>
+                  <li><a class="buttonlink" href="#">Dashboard</a></li>
+                  <li><a class="link" href="/marketplace.html">Marketplace</a></li>
+                </ul>
+                <ul class="navbar-nav gap-4" id="SocialNetwork">
+                  <li class="nav-item">
+                    <a href="https://www.twitter.com/poninisnft/" class="twitter" target="_blank" alt="Twitter"><i
+                        class="fab fa-twitter"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="https://www.instagram.com/poninisnft/" class="instagram" target="_blank" alt="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="https://t.me/poninisnft" class="telegram" target="_blank" alt="Telegram"><i class="fab fa-telegram"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="https://discord.gg/z7HFNAJkeY" class="discord" target="_blank" alt="Discord"><i class="fab fa-discord"></i></a>
+                  </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="barCountdown">
+      <nav class="bar" id="Gradient" style="height: 5px;">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+              </li>
+            </ul>
+      </nav>
+    </div>
+
+  <top class="container">
+    <div class="Title">
+      <img class="Logo" src="https://storage.googleapis.com/poninis/poninis_brand_En.svg" alt="Logo">
+    </div>
+  </top>
+
+    <h1>My NFTs</h1>
+
+    <main class="container">
+      <hr>
+      <p id="web3_message"></p>
+      <h3>My NFTs</h3>
+      <div id="my_nfts"></div>
+      <h3>My listings</h3>
+      <div id="my_listings"></div>
+
+      <div class="NFT-Card">
+        <div style="padding-top: 3rem;">
+          <div class="home-container">
+            <div style="margin-bottom: 4rem;">
+              <h3 class="marketplace-title heading"><span class="text-gradient">My Listings</span>🦄</h3>
+              <div style="display: flex; flex-direction: row;">
+                <div class="groupCard" style="padding-right: 35px; padding-left: 35px; width: 30em;">
+                  <div class="cardContainer hide">
+                    <div class="content" style="padding-right: 0px; padding-left: 0px; width: 20em;">
+                      <div style="width: 80%; padding-top: 3rem;">                
+                        <div class="item-card card" style="border-radius: 24px;">
+                          <div class="card-body" style="height: 450px; border-radius: 25px;">
+                            <div class="img-card" style="height: 293px; width: 100%; border-radius: 24px;">
+                              <a href="/item/0xdb0047cb1dfc44696f6e9868ef6bb40000280b05/3" style="text-decoration: none;">
+                                <img src="https://storage.googleapis.com/apinft/e38cdff2d8848c9c557ea20ac736550a7b8e75be" style="position: absolute; margin: auto; inset: 0px 0px 111px; max-width: 100%; max-height: 293px;">
+                              </a>
+                            </div>
+                            <div style="padding-left: 10px; padding-right: 30px; height: 78px; width: 100%; left: 0px; bottom: 40px; position: absolute; display: inline-block; line-height: 25px;">
+                              <p class="mb-1" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 18px; font-weight: 600;">Poninis #7</p>
+                              <div class="mb-2 collection-card-text text-gradient mr-4" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 13px; max-width: 80%;">
+                                <p class="text-verified"><img class="mr-2" src="https://cdn.worldvectorlogo.com/logos/google-verified-1.svg" style="width: 15px; height: 15px;"><a href="" target="_blank">Poninis</a></p>
+                              </div>
+                              <div class="listing-text mr-4 my-auto subheadingColor" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 12px;">
+                                <p><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png" style="width: 18px; height: 18px; margin-bottom: 1px; margin-right: 6px; border-radius: 50%;" id="listing.token_id">1 listing from 0.05 MATIC</p>
+                              </div>
+                              <div class="btnDelist">
+                                <input class="DelistButton" type="button" value="Delist" onclick="removeListing(listing_id)">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardContainer hide">
+                    <div class="content" style="padding-right: 0px; padding-left: 0px; width: 20em;">
+                      <div style="width: 80%; padding-top: 3rem;">                
+                        <div class="item-card card" style="border-radius: 24px;">
+                          <div class="card-body" style="height: 450px; border-radius: 25px;">
+                            <div class="img-card" style="height: 293px; width: 100%; border-radius: 24px;">
+                              <a href="/item/0xdb0047cb1dfc44696f6e9868ef6bb40000280b05/3" style="text-decoration: none;">
+                                <img src="https://storage.googleapis.com/apinft/e38cdff2d8848c9c557ea20ac736550a7b8e75be" style="position: absolute; margin: auto; inset: 0px 0px 111px; max-width: 100%; max-height: 293px;">
+                              </a>
+                            </div>
+                            <div style="padding-left: 10px; padding-right: 30px; height: 78px; width: 100%; left: 0px; bottom: 40px; position: absolute; display: inline-block; line-height: 25px;">
+                              <p class="mb-1" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 18px; font-weight: 600;">Poninis #7</p>
+                              <div class="mb-2 collection-card-text text-gradient mr-4" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 13px; max-width: 80%;">
+                                <p class="text-verified"><img class="mr-2" src="https://cdn.worldvectorlogo.com/logos/google-verified-1.svg" style="width: 15px; height: 15px;"><a href="" target="_blank">Poninis</a></p>
+                              </div>
+                              <div class="btnApprove">
+                                <input class="ApproveButton" type="button" value="Approve" onclick="approve(MARKETPLACE_CONTRACT_ADDRESS, nft_id)">
+                              </div>
+                              <div class="listingfrom">
+                                <input style="border-radius: 25px;" type="text" placeholder="Cost" id="nft_id"><input class="SellButton" type="button" value="Sell" onclick="addListing(nft_id, web3.utils.toWei(price))">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardContainer hide">
+                    <div class="content" style="padding-right: 0px; padding-left: 0px; width: 20em;">
+                      <div style="width: 80%; padding-top: 3rem;">                
+                        <div class="item-card card" style="border-radius: 24px;">
+                          <div class="card-body" style="height: 450px; border-radius: 25px;">
+                            <div class="img-card" style="height: 293px; width: 100%; border-radius: 24px;">
+                              <a href="/item/0xdb0047cb1dfc44696f6e9868ef6bb40000280b05/3" style="text-decoration: none;">
+                                <img src="https://storage.googleapis.com/apinft/e38cdff2d8848c9c557ea20ac736550a7b8e75be" style="position: absolute; margin: auto; inset: 0px 0px 111px; max-width: 100%; max-height: 293px;">
+                              </a>
+                            </div>
+                            <div style="padding-left: 10px; padding-right: 30px; height: 78px; width: 100%; left: 0px; bottom: 40px; position: absolute; display: inline-block; line-height: 25px;">
+                              <p class="mb-1" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 18px; font-weight: 600;">Poninis #7</p>
+                              <div class="mb-2 collection-card-text text-gradient mr-4" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 13px; max-width: 80%;">
+                                <p class="text-verified"><img class="mr-2" src="https://cdn.worldvectorlogo.com/logos/google-verified-1.svg" style="width: 15px; height: 15px;"><a href="" target="_blank">Poninis</a></p>
+                              </div>
+                              <div class="listing-text mr-4 my-auto subheadingColor" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 12px;">
+                                <p><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png" style="width: 18px; height: 18px; margin-bottom: 1px; margin-right: 6px; border-radius: 50%;">1 listing from 0.05 MATIC</p>
+                              </div>
+                              <div class="btnBuy">
+                                <input class="BuyButton" type="button" value="Buy" onclick="Buy">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardContainer hide">
+                    <div class="content" style="padding-right: 0px; padding-left: 0px; width: 20em;">
+                      <div style="width: 80%; padding-top: 3rem;">                
+                        <div class="item-card card" style="border-radius: 24px;">
+                          <div class="card-body" style="height: 450px; border-radius: 25px;">
+                            <div class="img-card" style="height: 293px; width: 100%; border-radius: 24px;">
+                              <a href="/item/0xdb0047cb1dfc44696f6e9868ef6bb40000280b05/3" style="text-decoration: none;">
+                                <img src="https://storage.googleapis.com/apinft/e38cdff2d8848c9c557ea20ac736550a7b8e75be" style="position: absolute; margin: auto; inset: 0px 0px 111px; max-width: 100%; max-height: 293px;">
+                              </a>
+                            </div>
+                            <div style="padding-left: 10px; padding-right: 30px; height: 78px; width: 100%; left: 0px; bottom: 40px; position: absolute; display: inline-block; line-height: 25px;">
+                              <p class="mb-1" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 18px; font-weight: 600;">Poninis #7</p>
+                              <div class="mb-2 collection-card-text text-gradient mr-4" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 13px; max-width: 80%;">
+                                <p class="text-verified"><img class="mr-2" src="https://cdn.worldvectorlogo.com/logos/google-verified-1.svg" style="width: 15px; height: 15px;"><a href="" target="_blank">Poninis</a></p>
+                              </div>
+                              <div class="listing-text mr-4 my-auto subheadingColor" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 12px;">
+                                <p><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png" style="width: 18px; height: 18px; margin-bottom: 1px; margin-right: 6px; border-radius: 50%;">1 listing from 0.05 MATIC</p>
+                              </div>
+                              <div class="btnBuy">
+                                <input class="BuyButton" type="button" value="Buy" onclick="Buy">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardContainer hide">
+                    <div class="content" style="padding-right: 0px; padding-left: 0px; width: 20em;">
+                      <div style="width: 80%; padding-top: 3rem;">                
+                        <div class="item-card card" style="border-radius: 24px;">
+                          <div class="card-body" style="height: 450px; border-radius: 25px;">
+                            <div class="img-card" style="height: 293px; width: 100%; border-radius: 24px;">
+                              <a href="/item/0xdb0047cb1dfc44696f6e9868ef6bb40000280b05/3" style="text-decoration: none;">
+                                <img src="https://storage.googleapis.com/apinft/e38cdff2d8848c9c557ea20ac736550a7b8e75be" style="position: absolute; margin: auto; inset: 0px 0px 111px; max-width: 100%; max-height: 293px;">
+                              </a>
+                            </div>
+                            <div style="padding-left: 10px; padding-right: 30px; height: 78px; width: 100%; left: 0px; bottom: 40px; position: absolute; display: inline-block; line-height: 25px;">
+                              <p class="mb-1" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 18px; font-weight: 600;">Poninis #7</p>
+                              <div class="mb-2 collection-card-text text-gradient mr-4" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 13px; max-width: 80%;">
+                                <p class="text-verified"><img class="mr-2" src="https://cdn.worldvectorlogo.com/logos/google-verified-1.svg" style="width: 15px; height: 15px;"><a href="" target="_blank">Poninis</a></p>
+                              </div>
+                              <div class="listing-text mr-4 my-auto subheadingColor" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 12px;">
+                                <p><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png" style="width: 18px; height: 18px; margin-bottom: 1px; margin-right: 6px; border-radius: 50%;">1 listing from 0.05 MATIC</p>
+                              </div>
+                              <div class="btnBuy">
+                                <input class="BuyButton" type="button" value="Buy" onclick="Buy">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardContainer hide">
+                    <div class="content" style="padding-right: 0px; padding-left: 0px; width: 20em;">
+                      <div style="width: 80%; padding-top: 3rem;">                
+                        <div class="item-card card" style="border-radius: 24px;">
+                          <div class="card-body" style="height: 450px; border-radius: 25px;">
+                            <div class="img-card" style="height: 293px; width: 100%; border-radius: 24px;">
+                              <a href="/item/0xdb0047cb1dfc44696f6e9868ef6bb40000280b05/3" style="text-decoration: none;">
+                                <img src="https://storage.googleapis.com/apinft/e38cdff2d8848c9c557ea20ac736550a7b8e75be" style="position: absolute; margin: auto; inset: 0px 0px 111px; max-width: 100%; max-height: 293px;">
+                              </a>
+                            </div>
+                            <div style="padding-left: 10px; padding-right: 30px; height: 78px; width: 100%; left: 0px; bottom: 40px; position: absolute; display: inline-block; line-height: 25px;">
+                              <p class="mb-1" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 18px; font-weight: 600;">Poninis #7</p>
+                              <div class="mb-2 collection-card-text text-gradient mr-4" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 13px; max-width: 80%;">
+                                <p class="text-verified"><img class="mr-2" src="https://cdn.worldvectorlogo.com/logos/google-verified-1.svg" style="width: 15px; height: 15px;"><a href="" target="_blank">Poninis</a></p>
+                              </div>
+                              <div class="listing-text mr-4 my-auto subheadingColor" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 12px;">
+                                <p><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png" style="width: 18px; height: 18px; margin-bottom: 1px; margin-right: 6px; border-radius: 50%;">1 listing from 0.05 MATIC</p>
+                              </div>
+                              <div class="btnBuy">
+                                <input class="BuyButton" type="button" value="Buy" onclick="Buy">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardContainer hide">
+                    <div class="content" style="padding-right: 0px; padding-left: 0px; width: 20em;">
+                      <div style="width: 80%; padding-top: 3rem;">                
+                        <div class="item-card card" style="border-radius: 24px;">
+                          <div class="card-body" style="height: 450px; border-radius: 25px;">
+                            <div class="img-card" style="height: 293px; width: 100%; border-radius: 24px;">
+                              <a href="/item/0xdb0047cb1dfc44696f6e9868ef6bb40000280b05/3" style="text-decoration: none;">
+                                <img src="https://storage.googleapis.com/apinft/e38cdff2d8848c9c557ea20ac736550a7b8e75be" style="position: absolute; margin: auto; inset: 0px 0px 111px; max-width: 100%; max-height: 293px;">
+                              </a>
+                            </div>
+                            <div style="padding-left: 10px; padding-right: 30px; height: 78px; width: 100%; left: 0px; bottom: 40px; position: absolute; display: inline-block; line-height: 25px;">
+                              <p class="mb-1" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 18px; font-weight: 600;">Poninis #7</p>
+                              <div class="mb-2 collection-card-text text-gradient mr-4" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 13px; max-width: 80%;">
+                                <p class="text-verified"><img class="mr-2" src="https://cdn.worldvectorlogo.com/logos/google-verified-1.svg" style="width: 15px; height: 15px;"><a href="" target="_blank">Poninis</a></p>
+                              </div>
+                              <div class="listing-text mr-4 my-auto subheadingColor" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 12px;">
+                                <p><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png" style="width: 18px; height: 18px; margin-bottom: 1px; margin-right: 6px; border-radius: 50%;">1 listing from 0.05 MATIC</p>
+                              </div>
+                              <div class="btnBuy">
+                                <input class="BuyButton" type="button" value="Buy" onclick="Buy">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardContainer hide">
+                    <div class="content" style="padding-right: 0px; padding-left: 0px; width: 20em;">
+                      <div style="width: 80%; padding-top: 3rem;">                
+                        <div class="item-card card" style="border-radius: 24px;">
+                          <div class="card-body" style="height: 450px; border-radius: 25px;">
+                            <div class="img-card" style="height: 293px; width: 100%; border-radius: 24px;">
+                              <a href="/item/0xdb0047cb1dfc44696f6e9868ef6bb40000280b05/3" style="text-decoration: none;">
+                                <img src="https://storage.googleapis.com/apinft/e38cdff2d8848c9c557ea20ac736550a7b8e75be" style="position: absolute; margin: auto; inset: 0px 0px 111px; max-width: 100%; max-height: 293px;">
+                              </a>
+                            </div>
+                            <div style="padding-left: 10px; padding-right: 30px; height: 78px; width: 100%; left: 0px; bottom: 40px; position: absolute; display: inline-block; line-height: 25px;">
+                              <p class="mb-1" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 18px; font-weight: 600;">Poninis #7</p>
+                              <div class="mb-2 collection-card-text text-gradient mr-4" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 13px; max-width: 80%;">
+                                <p class="text-verified"><img class="mr-2" src="https://cdn.worldvectorlogo.com/logos/google-verified-1.svg" style="width: 15px; height: 15px;"><a href="" target="_blank">Poninis</a></p>
+                              </div>
+                              <div class="listing-text mr-4 my-auto subheadingColor" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 12px;">
+                                <p><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png" style="width: 18px; height: 18px; margin-bottom: 1px; margin-right: 6px; border-radius: 50%;">1 listing from 0.05 MATIC</p>
+                              </div>
+                              <div class="btnBuy">
+                                <input class="BuyButton" type="button" value="Buy" onclick="Buy">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardContainer hide">
+                    <div class="content" style="padding-right: 0px; padding-left: 0px; width: 20em;">
+                      <div style="width: 80%; padding-top: 3rem;">                
+                        <div class="item-card card" style="border-radius: 24px;">
+                          <div class="card-body" style="height: 450px; border-radius: 25px;">
+                            <div class="img-card" style="height: 293px; width: 100%; border-radius: 24px;">
+                              <a href="/item/0xdb0047cb1dfc44696f6e9868ef6bb40000280b05/3" style="text-decoration: none;">
+                                <img src="https://storage.googleapis.com/apinft/e38cdff2d8848c9c557ea20ac736550a7b8e75be" style="position: absolute; margin: auto; inset: 0px 0px 111px; max-width: 100%; max-height: 293px;">
+                              </a>
+                            </div>
+                            <div style="padding-left: 10px; padding-right: 30px; height: 78px; width: 100%; left: 0px; bottom: 40px; position: absolute; display: inline-block; line-height: 25px;">
+                              <p class="mb-1" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 18px; font-weight: 600;">Poninis #7</p>
+                              <div class="mb-2 collection-card-text text-gradient mr-4" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 13px; max-width: 80%;">
+                                <p class="text-verified"><img class="mr-2" src="https://cdn.worldvectorlogo.com/logos/google-verified-1.svg" style="width: 15px; height: 15px;"><a href="" target="_blank">Poninis</a></p>
+                              </div>
+                              <div class="listing-text mr-4 my-auto subheadingColor" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 12px;">
+                                <p><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png" style="width: 18px; height: 18px; margin-bottom: 1px; margin-right: 6px; border-radius: 50%;">1 listing from 0.05 MATIC</p>
+                              </div>
+                              <div class="btnBuy">
+                                <input class="BuyButton" type="button" value="Buy" onclick="Buy">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardContainer hide">
+                    <div class="content" style="padding-right: 0px; padding-left: 0px; width: 20em;">
+                      <div style="width: 80%; padding-top: 3rem;">                
+                        <div class="item-card card" style="border-radius: 24px;">
+                          <div class="card-body" style="height: 450px; border-radius: 25px;">
+                            <div class="img-card" style="height: 293px; width: 100%; border-radius: 24px;">
+                              <a href="/item/0xdb0047cb1dfc44696f6e9868ef6bb40000280b05/3" style="text-decoration: none;">
+                                <img src="https://storage.googleapis.com/apinft/e38cdff2d8848c9c557ea20ac736550a7b8e75be" style="position: absolute; margin: auto; inset: 0px 0px 111px; max-width: 100%; max-height: 293px;">
+                              </a>
+                            </div>
+                            <div style="padding-left: 10px; padding-right: 30px; height: 78px; width: 100%; left: 0px; bottom: 40px; position: absolute; display: inline-block; line-height: 25px;">
+                              <p class="mb-1" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 18px; font-weight: 600;">Poninis #7</p>
+                              <div class="mb-2 collection-card-text text-gradient mr-4" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 13px; max-width: 80%;">
+                                <p class="text-verified"><img class="mr-2" src="https://cdn.worldvectorlogo.com/logos/google-verified-1.svg" style="width: 15px; height: 15px;"><a href="" target="_blank">Poninis</a></p>
+                              </div>
+                              <div class="listing-text mr-4 my-auto subheadingColor" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 12px;">
+                                <p><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png" style="width: 18px; height: 18px; margin-bottom: 1px; margin-right: 6px; border-radius: 50%;">1 listing from 0.05 MATIC</p>
+                              </div>
+                              <div class="btnBuy">
+                                <input class="BuyButton" type="button" value="Buy" onclick="Buy">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardContainer hide">
+                    <div class="content" style="padding-right: 0px; padding-left: 0px; width: 20em;">
+                      <div style="width: 80%; padding-top: 3rem;">                
+                        <div class="item-card card" style="border-radius: 24px;">
+                          <div class="card-body" style="height: 450px; border-radius: 25px;">
+                            <div class="img-card" style="height: 293px; width: 100%; border-radius: 24px;">
+                              <a href="/item/0xdb0047cb1dfc44696f6e9868ef6bb40000280b05/3" style="text-decoration: none;">
+                                <img src="https://storage.googleapis.com/apinft/e38cdff2d8848c9c557ea20ac736550a7b8e75be" style="position: absolute; margin: auto; inset: 0px 0px 111px; max-width: 100%; max-height: 293px;">
+                              </a>
+                            </div>
+                            <div style="padding-left: 10px; padding-right: 30px; height: 78px; width: 100%; left: 0px; bottom: 40px; position: absolute; display: inline-block; line-height: 25px;">
+                              <p class="mb-1" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 18px; font-weight: 600;">Poninis #7</p>
+                              <div class="mb-2 collection-card-text text-gradient mr-4" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 13px; max-width: 80%;">
+                                <p class="text-verified"><img class="mr-2" src="https://cdn.worldvectorlogo.com/logos/google-verified-1.svg" style="width: 15px; height: 15px;"><a href="" target="_blank">Poninis</a></p>
+                              </div>
+                              <div class="listing-text mr-4 my-auto subheadingColor" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 12px;">
+                                <p><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png" style="width: 18px; height: 18px; margin-bottom: 1px; margin-right: 6px; border-radius: 50%;">1 listing from 0.05 MATIC</p>
+                              </div>
+                              <div class="btnBuy">
+                                <input class="BuyButton" type="button" value="Buy" onclick="Buy">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cardContainer hide">
+                    <div class="content" style="padding-right: 0px; padding-left: 0px; width: 20em;">
+                      <div style="width: 80%; padding-top: 3rem;">                
+                        <div class="item-card card" style="border-radius: 24px;">
+                          <div class="card-body" style="height: 450px; border-radius: 25px;">
+                            <div class="img-card" style="height: 293px; width: 100%; border-radius: 24px;">
+                              <a href="/item/0xdb0047cb1dfc44696f6e9868ef6bb40000280b05/3" style="text-decoration: none;">
+                                <img src="https://storage.googleapis.com/apinft/e38cdff2d8848c9c557ea20ac736550a7b8e75be" style="position: absolute; margin: auto; inset: 0px 0px 111px; max-width: 100%; max-height: 293px;">
+                              </a>
+                            </div>
+                            <div style="padding-left: 10px; padding-right: 30px; height: 78px; width: 100%; left: 0px; bottom: 40px; position: absolute; display: inline-block; line-height: 25px;">
+                              <p class="mb-1" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 18px; font-weight: 600;">Poninis #7</p>
+                              <div class="mb-2 collection-card-text text-gradient mr-4" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 13px; max-width: 80%;">
+                                <p class="text-verified"><img class="mr-2" src="https://cdn.worldvectorlogo.com/logos/google-verified-1.svg" style="width: 15px; height: 15px;"><a href="" target="_blank">Poninis</a></p>
+                              </div>
+                              <div class="listing-text mr-4 my-auto subheadingColor" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; font-size: 12px;">
+                                <p><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/3890.png" style="width: 18px; height: 18px; margin-bottom: 1px; margin-right: 6px; border-radius: 50%;">1 listing from 0.05 MATIC</p>
+                              </div>
+                              <div class="btnBuy">
+                                <input class="BuyButton" type="button" value="Buy" onclick="Buy">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="Load-More" style="display: flex; justify-content: center; margin-top: 5rem; width: 100%;">
+                <button type="button" class="load-more-button" style="width: 80px; cursor: pointer;" id="hideCard_btn"><span>Load more</span>
+                </button>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class='Footer'>
+        <div class="container">
+          <div class="FooterContainer ContactFooter">
+            <ul>
+              <li class="FooterContact">
+                <h6>Community</h6>
+                <a class="link" style="text-decoration:none" target="_blank" href="https://discord.gg/z7HFNAJkeY">Discord</a>
+                <br />
+                <a class="link" style="text-decoration:none" target="_blank" href="https://t.me/poninisnft">Telegram</a>
+              </li>
+              <li class="FooterContact">
+                <h6>Social Network</h6>
+                <a class="link" style="text-decoration:none" target="_blank" href="https://www.instagram.com/poninisnft/">Instagram</a>
+                <br />
+                <a class="link" style="text-decoration:none" target="_blank" href="https://www.twitter.com/poninisnft/">Twitter</a>
+              </li>
+            </ul>
+          </div>
+          <hr style="margin: 15px 15px 15px 0;">
+          <div class="FooterContainer">
+            <ul>
+              <li>
+                <h6 style="color: white; font-weight: 400;">Copyright © 2022 Poninis | All Right Reserverd</h6>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.5/web3.min.js"></script>
+    <script type="text/javascript" src="./src/blockchain_stuff.js"></script>
+    <script type="text/javascript" src="src/menu.js"></script>
+    <script src="./src/loadcard.js"></script>
+</body>
+
+</html>
