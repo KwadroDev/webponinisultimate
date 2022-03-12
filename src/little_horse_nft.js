@@ -224,7 +224,7 @@ const editPresaleReserved = async () => {
 }
 
 const setPresaleActive = async () => {
-  const result = await contract.methods.setPresaleActive(true) // edit true or false
+  const result = await contract.methods.setPresaleActive(false) // edit true or false
     .send({ from: accounts[0], gas: 0, value: 0 })
     .on('transactionHash', function(hash){
       document.getElementById("web3_message").textContent="Minting...";
