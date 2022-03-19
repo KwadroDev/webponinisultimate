@@ -1,5 +1,5 @@
 // countdown
-let launchDate = new Date("April 15, 2022 20:00:00").getTime();
+let launchDate = new Date("April 9, 2022 20:00:00").getTime();
 
 let timer = setInterval(tick, 1000);
 

@@ -7,6 +7,6 @@ function idioma() {
     if (id==true) {
         location.href="../es.html";
     } else {
-        location.href="../index.html";
+        location.href="/";
     }
 }
