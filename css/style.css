@@ -886,6 +886,24 @@ button.modal-return-button .MuiSvgIcon-root {
     color: #fff;
 }
 
+.Logos {
+    display: block;
+    grid-column: 1fr;
+    text-align: center;
+}
+
+.Polygon {
+    width: 250px;
+}
+
+.NFTCalendar {
+    width: 150px;
+}
+
+p3 {
+    color: #c777b9;
+}
+
 @media (min-width: 600px) {
     .Logo {
         width: 350px;
@@ -960,6 +978,16 @@ button.modal-return-button .MuiSvgIcon-root {
 
     .groupCard {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .Logos {
+        display: block;
+        grid-column: 1fr;
+        text-align: center;
+    }
+
+    .Giveaway {
+        text-align: center;
     }
 }
 
@@ -1079,6 +1107,20 @@ button.modal-return-button .MuiSvgIcon-root {
 
     .groupCard {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .Logos {
+        display: block;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .Polygon {
+        width: 500px;
+    }
+
+    .NFTCalendar {
+        width: 250px;
     }
 }
 
