@@ -7,6 +7,7 @@ ScrollReveal().reveal('.Header', { delay: 250 });
 ScrollReveal().reveal('.Collage', { delay: 250 });
 ScrollReveal().reveal('.Mint', { delay: 250 });
 ScrollReveal().reveal('.Logos', { delay: 250 });
+ScrollReveal().reveal('.Whitelist', { delay: 250 });
 ScrollReveal().reveal('.Giveaway', { delay: 250 });
 ScrollReveal().reveal('.Story', { delay: 250 });
 ScrollReveal().reveal('.Mint-Details', { delay: 250 });
