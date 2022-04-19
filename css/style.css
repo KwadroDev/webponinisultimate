@@ -956,14 +956,14 @@ p3 {
 
 .slide-text1 {
     display: flex;
-    width: calc(209px * 18);
+    width: calc(210px * 18);
     animation: text1 40s reverse linear infinite;
     position: relative;
 }
 
 .slide-text2 {
     display: flex;
-    width: calc(209px * 18);
+    width: calc(210px * 18);
     animation: text2 40s reverse linear infinite;
     position: relative;
 }
@@ -996,7 +996,7 @@ p3 {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-209px * 9));
+        transform: translateX(calc(-210px * 9));
     }
 }
 
@@ -1005,7 +1005,7 @@ p3 {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-209px * 9));
+        transform: translateX(calc(-210px * 9));
     }
 }
 
