@@ -1268,7 +1268,7 @@ p3 {
     }
 
     .slide-text1 {
-        width: calc(308px * 18);
+        width: calc(309px * 18);
     }
     
     .slide-text2 {
@@ -1303,7 +1303,7 @@ p3 {
             transform: translateX(0);
         }
         100% {
-            transform: translateX(calc(-308px * 9));
+            transform: translateX(calc(-309px * 9));
         }
     }
 
