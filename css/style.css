@@ -913,6 +913,112 @@ p3 {
     text-align: center;
 }
 
+.slideNFT {
+    display: block;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    place-items: center;
+    overflow: hidden;
+    flex: 1;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 5px;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(208px * 20);
+    gap: 15px;
+    animation: scroll 40s linear infinite;
+}
+
+.slide-track2 {
+    display: flex;
+    width: calc(208px * 20);
+    gap: 15px;
+    animation: nft 40s linear reverse infinite;
+}
+
+.slide-track:hover {
+    animation-play-state: paused;
+}
+
+.slideNFT img {
+    width: 193px;
+    border-radius: 15px;
+}
+
+.slide {
+    align-items: center;
+    perspective: 100px;
+}
+
+.slide-text1 {
+    display: flex;
+    width: calc(194px * 18);
+    animation: text1 40s reverse linear infinite;
+    position: relative;
+}
+
+.slide-text2 {
+    display: flex;
+    width: calc(194px * 18);
+    animation: text2 40s reverse linear infinite;
+    position: relative;
+}
+
+.slide-text h6 {
+    letter-spacing: 2.51px;
+    font-weight: 500;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-208px * 10));
+    }
+}
+
+@keyframes nft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-208px * 10));
+    }
+}
+
+@keyframes text1 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-194px * 9));
+    }
+}
+
+@keyframes text2 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-194px * 9));
+    }
+}
+
+.NFTMint {
+    display: block;
+    text-align: center;
+}
+
+.nftMint {
+    width: 193px;
+    border-radius: 15px;
+}
+
 @media (min-width: 600px) {
     .Logo {
         width: 350px;
@@ -1006,6 +1112,10 @@ p3 {
 
     .Whitelist p {
         text-align: center;
+    }
+
+    .nftMint {
+        width: 293px;
     }
 }
 
@@ -1139,6 +1249,75 @@ p3 {
 
     .NFTCalendar {
         width: 250px;
+    }
+
+    .slideNFT {
+        width: 100%;
+    }
+    
+    .slideNFT img {
+        width: 293px;
+    }
+
+    .slide-track {
+        width: calc(308px * 20);
+    }
+
+    .slide-track2 {
+        width: calc(308px * 20);
+    }
+
+    .slide-text1 {
+        width: calc(285px * 18);
+    }
+    
+    .slide-text2 {
+        width: calc(285px * 18);
+    }
+
+    .slide-text h6 {
+        letter-spacing: 4.07px;
+        font-size: 18px;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-308px * 10));
+        }
+    }
+
+    @keyframes nft {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-308px * 10));
+        }
+    }
+
+    @keyframes text1 {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-285px * 9));
+        }
+    }
+
+    @keyframes text2 {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-285px * 9));
+        }
+    }
+
+    .nftMint {
+        width: 393px;
     }
 }
 
