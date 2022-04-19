@@ -1268,11 +1268,11 @@ p3 {
     }
 
     .slide-text1 {
-        width: calc(305px * 18);
+        width: calc(295px * 18);
     }
     
     .slide-text2 {
-        width: calc(305px * 18);
+        width: calc(295px * 18);
     }
 
     .slide-text h6 {
@@ -1303,7 +1303,7 @@ p3 {
             transform: translateX(0);
         }
         100% {
-            transform: translateX(calc(-285px * 9));
+            transform: translateX(calc(-286px * 9));
         }
     }
 
@@ -1312,7 +1312,7 @@ p3 {
             transform: translateX(0);
         }
         100% {
-            transform: translateX(calc(-285px * 9));
+            transform: translateX(calc(-286px * 9));
         }
     }
 
