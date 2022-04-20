@@ -1039,6 +1039,10 @@ p3 {
     border-radius: 15px;
 }
 
+.MintPause {
+    width: 193px;
+}
+
 @media (min-width: 600px) {
     .Logo {
         width: 350px;
