@@ -113,7 +113,7 @@ async function loadDapp() {
           if(document.getElementById("total_mint"))
             document.getElementById("total_mint").textContent = available + "/" + MAX_SUPPLY + " available"
           if(document.getElementById("price"))
-            document.getElementById("price").textContent = "Price: " + web3.utils.fromWei(NFT_PRICE) + " MATIC"
+            document.getElementById("price").textContent = "Cost: " + web3.utils.fromWei(NFT_PRICE) + " MATIC"
           web3.eth.getAccounts(function(err, accounts){
             if (err != null)
               console.error("An error occurred: "+err);
@@ -127,7 +127,7 @@ async function loadDapp() {
         };
         awaitContract();
       } else {
-        document.getElementById("web3_message").textContent="Please connect to Polygon Testnet";
+        document.getElementById("web3_message").textContent="Please connect to Polygon Mainnet";
       }
     });
   };
