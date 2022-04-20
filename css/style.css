@@ -1141,6 +1141,10 @@ p3 {
     .nftMint {
         width: 293px;
     }
+
+    .MintPause {
+        width: 293px;
+    }
 }
 
 @media (min-width: 970px) {
@@ -1302,6 +1306,10 @@ p3 {
     .slide-text h6 {
         letter-spacing: 4.07px;
         font-size: 18px;
+    }
+
+    .MintPause {
+        width: 350px;
     }
 
     @keyframes scroll {
