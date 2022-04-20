@@ -69,6 +69,19 @@ body h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.quadBorder {
+    content: '';
+    vertical-align: -webkit-baseline-middle;
+    width: 50px;
+    height: 25px;
+    font-size: 6px;
+    border-radius: 25px;
+    box-sizing: border-box;
+    border: 8px solid rgb(228, 59, 59);
+    background: rgb(228, 59, 59);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .imgpolygon {
     height: 8px; 
     width: 8px;
@@ -304,6 +317,13 @@ body h1 {
 }
 
 #countdown {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+#countdownalmighty {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #ffffff;
     font-size: 25px;

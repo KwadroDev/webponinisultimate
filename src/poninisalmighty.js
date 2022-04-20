@@ -1,8 +1,6 @@
 const NETWORK_ID = 137
 var NFT_PRICE = null
-var PRESALE_PRICE = null
 var MAX_SUPPLY = null
-var MAX_PRESALE_SUPPLY = null
 var contract
 var accounts
 var web3
@@ -76,7 +74,7 @@ async function getRevertReason(txHash) {
 }
 
 const getContract = async (web3) => {
-  const response = await fetch("../contracts/LittleHorseNFTv10.json");
+  const response = await fetch("./contracts/PoninisAlmighty.json");
   const data = await response.json();
 
   const netId = await web3.eth.net.getId();
@@ -97,7 +95,7 @@ async function loadAccount() {
   balance = await contract.methods.balanceOf(accounts[0]).call()
   document.getElementById("web3_message").textContent="Connected"
   document.getElementById("connect_button").style.display = "none"
-  document.getElementById("nft_balance").textContent="You have " + balance + " Little Horse"
+  document.getElementById("nft_balance").textContent="You have " + balance + " Ponini's Almighty Limited Edition"
 }
 
 async function loadDapp() {
@@ -110,18 +108,12 @@ async function loadDapp() {
           contract = await getContract(web3);
           NFT_PRICE = await contract.methods.price().call()
           MAX_SUPPLY = await contract.methods.MAX_SUPPLY().call()
-          MAX_PRESALE_SUPPLY = await contract.methods.MAX_PRESALE_SUPPLY().call()
           total_mint = await contract.methods.totalSupply().call()
           available = MAX_SUPPLY - total_mint
-          available_presale = MAX_PRESALE_SUPPLY - total_mint
           if(document.getElementById("total_mint"))
-            document.getElementById("total_mint").textContent = available + " / " + MAX_SUPPLY + " available"
-          if(document.getElementById("total_mint_presale"))
-            document.getElementById("total_mint_presale").textContent = available_presale + "/" + MAX_PRESALE_SUPPLY + " available"
+            document.getElementById("total_mint").textContent = available + "/" + MAX_SUPPLY + " available"
           if(document.getElementById("price"))
-            document.getElementById("price").textContent = "Cost: " + web3.utils.fromWei(NFT_PRICE) + " MATIC"
-          if(document.getElementById("presale_price"))
-            document.getElementById("presale_price").textContent = "Presale Price: " + web3.utils.fromWei(PRESALE_PRICE) + " MATIC"
+            document.getElementById("price").textContent = "Price: " + web3.utils.fromWei(NFT_PRICE) + " MATIC"
           web3.eth.getAccounts(function(err, accounts){
             if (err != null)
               console.error("An error occurred: "+err);
@@ -144,7 +136,7 @@ async function loadDapp() {
 
 loadDapp()
 
-document.getElementById("web3_message").textContent="Please connect to Wallet Metamask"
+document.getElementById("web3_message").textContent="Please connect to Metamask"
 
 /* SALE */
 
@@ -152,80 +144,6 @@ const mint = async () => {
   let mint_amount = document.getElementById("mint_amount").value
   const result = await contract.methods.mintToken(mint_amount)
     .send({ from: accounts[0], gas: 0, value: NFT_PRICE * mint_amount })
-    .on('transactionHash', function(hash){
-      document.getElementById("web3_message").textContent="Minting...";
-    })
-    .on('receipt', function(receipt){
-      document.getElementById("web3_message").textContent="Success! Minting finished.";    })
-    .catch((revertReason) => {
-      getRevertReason(revertReason.receipt.transactionHash);
-    });
-}
-
-/* PRESALE */
-
-const mintPresale = async () => {
-  let mint_amount = document.getElementById("mint_amount").value
-  const result = await contract.methods.mintPresale(mint_amount)
-    .send({ from: accounts[0], gas: 0, value: PRESALE_PRICE * mint_amount })
-    .on('transactionHash', function(hash){
-      document.getElementById("web3_message").textContent="Minting...";
-    })
-    .on('receipt', function(receipt){
-      document.getElementById("web3_message").textContent="Success! Minting finished.";    })
-    .catch((revertReason) => {
-      getRevertReason(revertReason.receipt.transactionHash);
-    });
-}
-
-/* Whitelist */
-
-const mintWhitelist = async () => {
-  let mint_amount = document.getElementById("mint_amount").value
-  const result = await contract.methods.mintWhitelist(mint_amount)
-    .send({ from: accounts[0], gas: 0, value: NFT_PRICE * mint_amount })
-    .on('transactionHash', function(hash){
-      document.getElementById("web3_message").textContent="Minting...";
-    })
-    .on('receipt', function(receipt){
-      document.getElementById("web3_message").textContent="Success! Minting finished.";    })
-    .catch((revertReason) => {
-      getRevertReason(revertReason.receipt.transactionHash);
-    });
-}
-
-/* Owner */
-
-const mintReserved = async () => {
-  let mint_amount = document.getElementById("mint_amount").value
-  const result = await contract.methods.mintReserved(mint_amount)
-    .send({ from: accounts[0], gas: 0, value: 0 })
-    .on('transactionHash', function(hash){
-      document.getElementById("web3_message").textContent="Minting...";
-    })
-    .on('receipt', function(receipt){
-      document.getElementById("web3_message").textContent="Success! Minting finished.";    })
-    .catch((revertReason) => {
-      getRevertReason(revertReason.receipt.transactionHash);
-    });
-}
-
-const editPresaleReserved = async () => {
-  const result = await contract.methods.editPresaleReserved(["0xA","0xB"],[0,0])
-    .send({ from: accounts[0], gas: 0, value: 0 })
-    .on('transactionHash', function(hash){
-      document.getElementById("web3_message").textContent="Minting...";
-    })
-    .on('receipt', function(receipt){
-      document.getElementById("web3_message").textContent="Success! Minting finished.";    })
-    .catch((revertReason) => {
-      getRevertReason(revertReason.receipt.transactionHash);
-    });
-}
-
-const setPresaleActive = async () => {
-  const result = await contract.methods.setPresaleActive(false) // edit true or false
-    .send({ from: accounts[0], gas: 0, value: 0 })
     .on('transactionHash', function(hash){
       document.getElementById("web3_message").textContent="Minting...";
     })
@@ -250,7 +168,7 @@ const setSaleActive = async () => {
 }
 
 const setBaseURI = async () => {
-  const result = await contract.methods.setBaseURI("http://104.248.239.189/")
+  const result = await contract.methods.setBaseURI("http://137.184.216.183/")
     .send({ from: accounts[0], gas: 0, value: 0 })
     .on('transactionHash', function(hash){
       document.getElementById("web3_message").textContent="Minting...";
@@ -294,43 +212,6 @@ const setAddresses = async () => {
 
 const withdrawTeam = async () => {
   const result = await contract.methods.withdrawTeam("110")
-    .send({ from: accounts[0], gas: 0, value: 0 })
-    .on('transactionHash', function(hash){
-      document.getElementById("web3_message").textContent="Minting...";
-    })
-    .on('receipt', function(receipt){
-      document.getElementById("web3_message").textContent="Success! Minting finished.";    })
-    .catch((revertReason) => {
-      getRevertReason(revertReason.receipt.transactionHash);
-    });
-}
-
-const editWhitelistReserved = async () => {
-  const result = await contract.methods.editWhitelistReserved(
-    [
-      "0xe2Db8833b0CA64437b8Db3fd1A11507aDF93a845",
-      "0xCB1Eb3d1E74F0E7D2d1B0b63f7c23d826C9f75eE",
-      "0xA23B61B05859b0af014f40b23f19F6909f8418Fa"
-    ],
-    [
-      2,
-      2,
-      3
-    ]
-    )
-    .send({ from: accounts[0], gas: 0, value: 0 })
-    .on('transactionHash', function(hash){
-      document.getElementById("web3_message").textContent="Minting...";
-    })
-    .on('receipt', function(receipt){
-      document.getElementById("web3_message").textContent="Success! Minting finished.";    })
-    .catch((revertReason) => {
-      getRevertReason(revertReason.receipt.transactionHash);
-    });
-}
-
-const setWhitelistActive = async () => {
-  const result = await contract.methods.setWhitelistActive(false)
     .send({ from: accounts[0], gas: 0, value: 0 })
     .on('transactionHash', function(hash){
       document.getElementById("web3_message").textContent="Minting...";
